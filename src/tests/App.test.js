@@ -76,7 +76,7 @@ describe('Calculator', () => {
 
 
 
-  xit('should total 3 when dividing 21 by 7:', () => {
+  it('should total 3 when dividing 21 by 7:', () => {
     const button1 = container.getByTestId('number1');
     const button2 = container.getByTestId('number2');
     const button7 = container.getByTestId('number7');
