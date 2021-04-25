@@ -77,16 +77,18 @@ describe('Calculator', () => {
 
 
   xit('should total 3 when dividing 21 by 7:', () => {
-    const button3 = container.getByTestId('number3');
-    const button5 = container.getByTestId('number5');
-    const buttonMultiply = container.getByTestId('multiply');
+    const button1 = container.getByTestId('number1');
+    const button2 = container.getByTestId('number2');
+    const button7 = container.getByTestId('number7');
+    const buttonDivide = container.getByTestId('divide');
     const buttonEquals = container.getByTestId('equals');
     const runningTotal = container.getByTestId('running-total');
-    fireEvent.click(button3);
-    fireEvent.click(buttonMultiply);
-    fireEvent.click(button5);
+    fireEvent.click(button2);
+    fireEvent.click(button1);
+    fireEvent.click(buttonDivide);
+    fireEvent.click(button7);
     fireEvent.click(buttonEquals);
-    expect(runningTotal).toHaveTextContent('15');
+    expect(runningTotal).toHaveTextContent('3');
   })
 
   
