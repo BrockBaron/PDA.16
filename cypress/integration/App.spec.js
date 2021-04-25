@@ -73,7 +73,7 @@ describe("Calculator", () => {
   xit('should display apropriate output in even of exceptional circumstance dividing by 0', () => {
     // the code should diplay Error: Division by zero, when numner is divide by zero.
     
-    cy.get('.display').should('contain', '')
+    cy.get('.display').should('contain', 'Error: Division by zero')
 
   })
 
