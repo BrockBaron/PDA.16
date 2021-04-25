@@ -33,12 +33,12 @@ describe("Calculator", () => {
     cy.get('.display').should('contain', '-1')
   })
 
-  xit('should display result of arithmetic operation equaling float number', () => {
+  it('should display result of arithmetic operation equaling float number', () => {
     cy.get('#number5').click();
-    cy.get('#operator_divided').click();
-    cy.get('#number3').click();
+    cy.get('#operator_divide').click();
+    cy.get('#number2').click();
     cy.get('#operator_equals').click();
-    cy.get('.display').should('contain', '1.6')
+    cy.get('.display').should('contain', '2.5')
   })
 
   xit('should display result of arithmetic operation equaling larg number greater than 10 sig fig', () => {
