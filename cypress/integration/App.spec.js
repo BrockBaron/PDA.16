@@ -25,7 +25,7 @@ describe("Calculator", () => {
     cy.get('.display').should('contain', '3')
   })
 
-  xit('should display result of arithmetic operation equaling negative number', () => {
+  it('should display result of arithmetic operation equaling negative number', () => {
     cy.get('#number1').click();
     cy.get('#operator_subtract').click();
     cy.get('#number2').click();
@@ -73,5 +73,7 @@ describe("Calculator", () => {
     // the code should diplay Error: Division by zero, when numner is divide by zero.
     
     cy.get('.display').should('contain', '')
+
+  })
 
 })
