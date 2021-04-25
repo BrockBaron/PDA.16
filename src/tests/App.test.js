@@ -58,12 +58,38 @@ describe('Calculator', () => {
     expect(runningTotal).toHaveTextContent('15');
   })
 
-
-  xit('should total 3 when dividing 21 by 7:', () => {
-    
+  xit('should total 12345 when 1,2,3,4,5 is clicked:', () => {
+    const button1 = container.getByTestId('number1');
+    const button2 = container.getByTestId('number2');
+    const button3 = container.getByTestId('number3');
+    const button4 = container.getByTestId('number4');
+    const button5 = container.getByTestId('number5');
+    const runningTotal = container.getByTestId('running-total');
+    fireEvent.click(button1);
+    fireEvent.click(button2);
+    fireEvent.click(button3);
+    fireEvent.click(button4);
+    fireEvent.click(button5);
+    expect(runningTotal).toHaveTextContent('12345');
   })
 
 
+
+
+  xit('should total 3 when dividing 21 by 7:', () => {
+    const button3 = container.getByTestId('number3');
+    const button5 = container.getByTestId('number5');
+    const buttonMultiply = container.getByTestId('multiply');
+    const buttonEquals = container.getByTestId('equals');
+    const runningTotal = container.getByTestId('running-total');
+    fireEvent.click(button3);
+    fireEvent.click(buttonMultiply);
+    fireEvent.click(button5);
+    fireEvent.click(buttonEquals);
+    expect(runningTotal).toHaveTextContent('15');
+  })
+
+  
 
 
 })
