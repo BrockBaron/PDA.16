@@ -41,8 +41,9 @@ describe("Calculator", () => {
     cy.get('.display').should('contain', '2.5')
   })
 
-  xit('should display result of arithmetic operation equaling larg number greater than 10 sig fig', () => {
+  it('should display result of arithmetic operation equaling larg number greater than 10 sig fig', () => {
     //14 9's by 8 9s = 9.9999998999999e+21
+    cy.get('#number9').click();
     cy.get('#number9').click();
     cy.get('#number9').click();
     cy.get('#number9').click();
