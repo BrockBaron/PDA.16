@@ -46,7 +46,16 @@ describe('Calculator', () => {
 
 
   xit('should total 15 when multiplying 3 & 5:', () => {
-    
+    const button3 = container.getByTestId('number3');
+    const button5 = container.getByTestId('number5');
+    const buttonMultiply = container.getByTestId('multiply');
+    const buttonEquals = container.getByTestId('equals');
+    const runningTotal = container.getByTestId('running-total');
+    fireEvent.click(button3);
+    fireEvent.click(buttonMultiply);
+    fireEvent.click(button5);
+    fireEvent.click(buttonEquals);
+    expect(runningTotal).toHaveTextContent('15');
   })
 
 
