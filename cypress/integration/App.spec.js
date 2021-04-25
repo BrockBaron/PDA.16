@@ -7,4 +7,15 @@ describe("Calculator", () => {
     cy.get('#number2').click();
     cy.get('.display').should('contain', '2')
   })
+
+
+  it('should update display with running total when multiple numbers are clicked', () => {
+    cy.get('#number1').click();
+    cy.get('#number2').click();
+    cy.get('#number3').click();
+    cy.get('.display').should('contain', '123')
+  })
+
+
+
 })
