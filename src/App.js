@@ -26,7 +26,14 @@ function App() {
     setRunningTotal(0);
   }
 
-  const operatorClick = (operator) => {
+  const operatorClick = (operator, number) => {
+    
+      if (operator === '/' && number === '0') {
+        alert('Error: Can\'t divide by zero');
+        return '0';
+}
+    
+    
     // if there was a previous operator recorded as having been clicked, perform
       // the operation for the previous operator
       if (previousTotal && previousOperator) {
@@ -53,13 +60,14 @@ function App() {
       } else {
         setPreviousOperator(operator);
         setRunningTotal("");
-
       }
       // replace the previous total with the current running total and flag that a
       // new total has been calculated
 
       setPreviousTotal(runningTotal);
       setNewTotal(true);
+
+      
   }
 
   const add = (number) => {
