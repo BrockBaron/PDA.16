@@ -45,7 +45,7 @@ describe('Calculator', () => {
 
 
 
-  xit('should total 15 when multiplying 3 & 5:', () => {
+  it('should total 15 when multiplying 3 & 5:', () => {
     const button3 = container.getByTestId('number3');
     const button5 = container.getByTestId('number5');
     const buttonMultiply = container.getByTestId('multiply');
