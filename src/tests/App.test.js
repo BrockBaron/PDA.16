@@ -58,7 +58,7 @@ describe('Calculator', () => {
     expect(runningTotal).toHaveTextContent('15');
   })
 
-  xit('should total 12345 when 1,2,3,4,5 is clicked:', () => {
+  it('should total 12345 when 1,2,3,4,5 is clicked:', () => {
     const button1 = container.getByTestId('number1');
     const button2 = container.getByTestId('number2');
     const button3 = container.getByTestId('number3');
