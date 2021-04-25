@@ -16,9 +16,9 @@ describe("Calculator", () => {
     cy.get('.display').should('contain', '123')
   })
 
-  xit('should display result of arithmetic operation', () => {
+  it('should display result of arithmetic operation', () => {
     cy.get('#number1').click();
-    cy.get('#add').click();
+    cy.get('#operator_add').click();
     cy.get('#number2').click();
     cy.get('#equals').click();
     
