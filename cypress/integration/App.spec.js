@@ -70,10 +70,13 @@ describe("Calculator", () => {
     cy.get('.display').should('contain', '9.9999998999999e+21')
   })
 
-  xit('should display apropriate output in even of exceptional circumstance dividing by 0', () => {
+  it('should display apropriate output in even of exceptional circumstance dividing by 0', () => {
     // the code should diplay Error: Division by zero, when numner is divide by zero.
-    
-    cy.get('.display').should('contain', 'Error: Division by zero')
+    cy.get('#number9').click();
+    cy.get('#operator_divide').click();
+    cy.get('#number0').click();
+    cy.get('#operator_equals').click();
+    cy.get('.display').should('contain', 'Error: Cannot divide by zero')
 
   })
 
